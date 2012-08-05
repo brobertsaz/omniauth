@@ -212,7 +212,7 @@ module OmniAuth
     def callback_call
       setup_phase
 
-      log :info, "Callback phase initiated."
+      
       @env['omniauth.origin'] = session.delete('omniauth.origin')
       @env['omniauth.origin'] = nil if env['omniauth.origin'] == ''
       @env['omniauth.params'] = session.delete('omniauth.params') || {}
